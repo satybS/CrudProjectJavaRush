@@ -85,43 +85,6 @@ public class HibernateUserRepository implements UserRepository {
 
     @Override
     @SuppressWarnings("unchecked")
-    public List<User> getUsers(int age) {
-        Session session = sessionFactory.getCurrentSession();
-        Query query = session.createQuery("FROM User WHERE AGE = :age");
-        query.setParameter("age", age);
-        List<User> users = query.list();
-        for (User curr : users) {
-            logger.info("User list info: " + curr);
-        }
-        return users;
-    }
-
-    @Override
-    @SuppressWarnings("unchecked")
-    public List<User> getUsers(Date dateCreated) {
-        Calendar cal = GregorianCalendar.getInstance();
-        cal.setTime(dateCreated);
-        Session session = sessionFactory.getCurrentSession();
-        Query query = session.createQuery("FROM User WHERE " +
-                "year(CREATEDDATE) = :year " +
-                "and month(CREATEDDATE) = :month " +
-                "and day(CREATEDDATE) = :day " +
-                "and hour(CREATEDDATE) = :hour " +
-                "and minute(CREATEDDATE) = :minute");
-        query.setParameter("year", cal.get(Calendar.YEAR));
-        query.setParameter("month", cal.get(Calendar.MONTH) + 1);
-        query.setParameter("day", cal.get(Calendar.DAY_OF_MONTH));
-        query.setParameter("hour", cal.get(Calendar.HOUR));
-        query.setParameter("minute", cal.get(Calendar.MINUTE));
-        List<User> users = query.list();
-        for (User curr : users) {
-            logger.info("User list info: " + curr);
-        }
-        return users;
-    }
-
-    @Override
-    @SuppressWarnings("unchecked")
     public List<User> getAdmins() {
         Session session = sessionFactory.getCurrentSession();
         List<User> users = session.createQuery("FROM User WHERE ISADMIN = 1").list();

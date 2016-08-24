@@ -9,7 +9,6 @@ import CRUD.data.UserRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.Date;
 import java.util.List;
 
 @Service
@@ -54,18 +53,6 @@ public class UserServiceConcrete implements UserService {
     @Transactional
     public List<User> getUsers(String name) {
         return userRepository.getUsers(name);
-    }
-
-    @Override
-    @Transactional
-    public List<User> getUsers(int age) {
-        return userRepository.getUsers(age);
-    }
-
-    @Override
-    @Transactional
-    public List<User> getUsers(Date dateCreated) {
-        return userRepository.getUsers(dateCreated);
     }
 
     @Override

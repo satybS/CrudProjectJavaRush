@@ -2,7 +2,6 @@ package CRUD.data;
 
 import CRUD.User;
 
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -15,7 +14,5 @@ public interface UserRepository {
     User getUser(int id);
     List<User> getUsers(Long page);
     List<User> getUsers(String name);
-    List<User> getUsers(int age);
-    List<User> getUsers(Date dateCreated);
     List<User> getAdmins();
 }
