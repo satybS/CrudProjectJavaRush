@@ -6,62 +6,74 @@
 <html>
 <head>
     <title>Users page</title>
+    <LINK REL=StyleSheet HREF="style.css" TYPE="text/css" MEDIA=screen>
     <style type="text/css">
-        h1 {
-            margin-top: 10px;
-            margin-bottom: 0;
-        }
-
-        .tg {
-            border-collapse: collapse;
-            border-spacing: 0;
-            border-color: #ccc;
-            background-color: #f9f9f9
-        }
-
-        .tg td {
-            font-family: Arial, sans-serif;
-            font-size: 14px;
-            padding: 10px 5px;
-            border-style: solid;
-            border-width: 1px;
-            overflow: hidden;
-            word-break: normal;
-            border-color: #ccc;
-            color: #333;
-            background-color: #fff;
-        }
-
-        .tg th {
-            font-family: Arial, sans-serif;
-            font-size: 14px;
-            font-weight: normal;
-            padding: 10px 5px;
-            border-style: solid;
-            border-width: 1px;
-            overflow: hidden;
-            word-break: normal;
-            border-color: #ccc;
-            color: #333;
-            background-color: #f0f0f0;
-        }
-
-        ul.pagination {
-            display: inline-block;
-            margin-bottom: 10px;
-            padding: 0;
-        }
-
-        ul.pagination li {
-            display: inline;
-            border: 1px solid #ddd;
+     body {
+            font-family: arial, helvetica, sans-serif;
+            font-size: 80%;
             color: black;
-            float: left;
-            font-size: 18px;
-            padding: 8px 16px;
-            text-decoration: none;
-            transition: background-color 0.3s ease 0s;
-        }
+            background-color: #f5f5f0;
+            margin: 1em;
+            padding: 0;
+            }
+
+            h1 {
+                color:#1a1a1a;
+                margin-top: 10px;
+                margin-bottom: 0;
+            }
+
+            .tg {
+                border-collapse: collapse;
+                border-spacing: 0;
+                border-color: #ccc;
+                background-color: #f9f9f9
+            }
+
+            .tg td {
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+                padding: 10px 5px;
+                border-style: solid;
+                border-width: 1px;
+                overflow: hidden;
+                word-break: normal;
+                border-color: #ccc;
+                color: #333;
+                background-color: #fff;
+            }
+
+            .tg th {
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+                font-weight: normal;
+                padding: 10px 5px;
+                border-style: solid;
+                border-width: 1px;
+                overflow: hidden;
+                word-break: normal;
+                border-color: #ccc;
+                color: #333;
+                background-color: #f0f0f0;
+            }
+
+            ul.pagination {
+                display: inline-block;
+                margin-bottom: 10px;
+                padding: 0;
+            }
+
+            ul.pagination li {
+                display: inline;
+                border: 1px solid #ddd;
+                color: black;
+                float: left;
+                font-size: 18px;
+                padding: 8px 16px;
+                text-decoration: none;
+                transition: background-color 0.3s ease 0s;
+            }
+
     </style>
 </head>
 <body>
@@ -124,7 +136,7 @@
                         <tr>
                             <td><form:label path="name"><spring:message text="Name"/></form:label></td>
                             <td><form:input path="name"/></td>
-                            <td><input type="submit" name="action" value="<spring:message text="Search By Name"/>"/></td>
+                            <td><input type="submit" name="action" value="<spring:message text="Search"/>"/></td>
                         </tr>
                     </table>
                 </form:form>
