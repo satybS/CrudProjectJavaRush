@@ -8,4 +8,5 @@ Server: Apache Tomcat 7;
 
 Database: MySql, Name:users_db, Table:User, username= "root", password="root";
 
+
 For additional dependency information please read pom.xml file
